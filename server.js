@@ -5,13 +5,16 @@ const { ObjectId } = require('mongodb');
 const dotenv = require('dotenv')
 const { GetAllStudentsList,studentById,studentByName,createDoc,deleteDoc,updateDoc } = require('./services/studentService');
 const path = require('path');
+const {fileURLToPath}= require('url');
 
-app.use(express.static(path.join(__dirname, './client/build')))
+
 const app = express();
 app.use(express.json());
 app.use(cors());
+app.use(express.static('./client/build'))
 
 dotenv.config();
+
 
 
 // routes
