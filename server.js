@@ -73,25 +73,7 @@ app.get('/filterId', async (req, res) => {
 
 })
   
-  
-// app.get('/students/filterId', async (req, res) => {
-  
-//     try {
-//         const result = await db.collection('Students').findOne({id: parseInt(id) });
-  
-//       const exists = result !== null;
-//       res.json({ exists });
-//     } catch (error) {
-//       console.error('Error checking ID:', error);
-//       res.status(500).json({ error: 'An error occurred while checking the ID' });
-//     }
-//   });
-  
-  
-// //rest api
-// app.use("*", function(req, res){
-//     res.sendFile(path.join(__dirname, "./client/build/index.html"))
-//   })
+
 
 // Database Connection
 let db;
